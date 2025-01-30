@@ -50,7 +50,7 @@ public class ProjectSecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/magic-api/employees").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.GET, "/magic-api/employees/**").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.POST, "/magic-api/employees").hasRole("MANAGER")
-                        .requestMatchers(HttpMethod.PUT, "/magic-api/employees").hasRole("MANAGER")
+                        .requestMatchers(HttpMethod.PUT, "/magic-api/employees/**").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.DELETE, "/magic-api/employees/**").hasRole("ADMIN")
         );
 
